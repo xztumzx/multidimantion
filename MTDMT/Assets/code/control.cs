@@ -28,5 +28,17 @@ public class control : MonoBehaviour
             anim.SetBool("Moving w", true);
         }
         else { anim.SetBool("Moving w", false); }
+        
+        if (Input.GetKey(KeyCode.A))
+        {
+            anim.SetBool("Moving a", true);
+        }
+        else { anim.SetBool("Moving a", false); }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            anim.SetBool("Moving d", true);
+        }
+        else { anim.SetBool("Moving d", false); }
     }
 }
