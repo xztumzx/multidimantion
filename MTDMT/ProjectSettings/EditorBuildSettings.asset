@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/toey.unity
     guid: d2138896a992b144fb4de17c20d66c17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/new noey.unity
     guid: 8d2ecd32572ae82408002323337c6ca1
   m_configObjects: {}
