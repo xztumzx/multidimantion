@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PointController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public RectTransform pointer;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector2 movePos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(pointer.parent as RectTransform, Input.mousePosition, null, out movePos);
+        pointer.localPosition = movePos;
     }
 }

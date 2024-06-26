@@ -88,6 +88,16 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("noey3");
     }
 
+    public void NewGame() 
+    {
+        SceneManager.LoadScene("home");
+    }
+
+    public void Setting()
+    {
+        SceneManager.LoadScene("test");
+    }
+
     public void Exit()
     {
         Application.Quit();
