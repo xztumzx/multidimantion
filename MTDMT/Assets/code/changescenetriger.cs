@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class changescenetriger : MonoBehaviour
 {
-    public int nextscene;
+    public string nextscene;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) //tag Player
