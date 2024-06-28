@@ -5,15 +5,31 @@ using UnityEngine.UI;
 
 public class FloatingHPBar : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
+    public Slider hpSlider;
+    public float maxHealth = 100f;
+    public float health;
 
-    public void UpdateHPBar(float currentValue, float maxValue)
+    void Start()
     {
-        slider.value = currentValue / maxValue;
+         health = maxHealth;
     }
-    // Update is called once per frame
+
     void Update()
     {
-        
+         if (hpSlider.value != health)
+        {
+            hpSlider.value = health;
+
+        }
+
+         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            takeDamage(10);
+        }
+    }
+
+    void takeDamage(float damage)
+    {
+        health -= damage;
     }
 }
