@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 1697739892385369682}
   - component: {fileID: 8186177487530902827}
   m_Layer: 0
-  m_Name: sprite
+  m_Name: fadale
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
