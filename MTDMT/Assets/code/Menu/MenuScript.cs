@@ -7,12 +7,12 @@ using TMPro;
 
 public class MenuScript : MonoBehaviour
 {
-    [Header("Volume Setting")]
+    /*[Header("Volume Setting")]
     [SerializeField] private TMP_Text volumeTeextValue = null;
     [SerializeField] private Slider volumeSlider = null;
     [SerializeField] private float defaultVolume = 1.0f;
 
-    [SerializeField] private GameObject comfirmationPrompt = null;
+    [SerializeField] private GameObject comfirmationPrompt = null;*/
 
 
     [Header("Levels To Load")]
@@ -44,7 +44,7 @@ public class MenuScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetVolume(float volume)
+    /*public void SetVolume(float volume)
     {
         AudioListener.volume = volume;
         volumeTeextValue.text = volume.ToString("0.0");
@@ -72,26 +72,6 @@ public class MenuScript : MonoBehaviour
         comfirmationPrompt.SetActive(true);
         yield return new WaitForSeconds(2);
         comfirmationPrompt.SetActive(false);
-    }
-
-
-   /*public void Loadgame()
-    {
-        SceneManager.LoadScene("noey3");
-    }
-
-    public void NewGame() 
-    {
-        SceneManager.LoadScene("home");
-    }
-
-    public void Setting()
-    {
-        SceneManager.LoadScene("test");
-    }
-
-    public void Exit()
-    {
-        Application.Quit();
     }*/
+
 }
