@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2626030797801500299}
   - component: {fileID: 1096134688251383492}
   - component: {fileID: 6279250929997105386}
+  - component: {fileID: 7397387338144450890}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -141,6 +142,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54acf4508002edc45b35e511eb2b334a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7397387338144450890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7995907786549563649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d537fe3f0176fd40ae8dbe20b5761ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 9
+  dashDuration: 0.2
+  dashKey: 304
 --- !u!1 &8416427864518735373
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +171,7 @@ GameObject:
   - component: {fileID: 8186177487530902827}
   - component: {fileID: 7187789797051936546}
   - component: {fileID: 1083729078288011729}
+  - component: {fileID: 3226156612940087986}
   m_Layer: 0
   m_Name: fadale
   m_TagString: Player
@@ -290,3 +307,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee13eb914427664b9883ce5480264ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3226156612940087986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416427864518735373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8ed7b886f9ffe42b6d50e326f7ca78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  characontroll: {fileID: 0}
