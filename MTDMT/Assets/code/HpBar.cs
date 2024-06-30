@@ -5,38 +5,45 @@ using UnityEngine.UI;
 
 public class HpBar : MonoBehaviour
 {
-    public Image hpFill;
-    public float maxHp;
-    public float currentHp; // (เลือดไม่เริ่มใหม่)
+    //public Image healthFill;
+    //public int maxHealth;
+    //public int currentHealth; // (เลือดไม่เริ่มใหม่) 
 
-    void Start()
-    {
-        // currentHp = maxHp; //เลือดรีใหม่
-    }
-    void takeDamage(float damage)
-    {
-        currentHp -= damage;
+    public Slider slider;
 
-        hpFill.fillAmount = currentHp * (1 / maxHp);
+
+    private void Start()
+    {
+        //currentHealth = maxHealth;
+        slider = GetComponent<Slider>();
     }
 
-    void takeHeal(float Heal)
+    public void SetMaxHealth(int maxHealth)
     {
-        currentHp += Heal;
-
-        hpFill.fillAmount = currentHp * (1 / maxHp);
+        slider.maxValue = maxHealth;
+        slider.value = maxHealth;
     }
 
-    private void Update()
+    public void SetCurrentHealth(int currentHealth)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        slider.value = currentHealth;
+    }
+
+    /*void Update()
+    {
+        if (slider.value != currentHealth)
         {
-            takeDamage(10);
+            slider.value = currentHealth;
+
         }
 
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.N))
         {
-            takeHeal(20);
+            takeDamage(25);
         }
     }
+    void takeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }*/
 }
