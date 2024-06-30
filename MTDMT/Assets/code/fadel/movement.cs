@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerwithfreelook : MonoBehaviour
+public class pmovement : MonoBehaviour
 {
     public float moveSpeed = 5f;  // ความเร็วในการเคลื่อนที่
     public float rotateSpeed = 100f;  // ความเร็วในการหมุน
-    public float runSpeedMultiplier = 2f;  // ตัวคูณความเร็วเมื่อวิ่ง
+    //public float runSpeedMultiplier = 2f;  // ตัวคูณความเร็วเมื่อวิ่ง
 
     private Rigidbody rb;
     private Camera mainCamera;
@@ -22,7 +22,7 @@ public class playerwithfreelook : MonoBehaviour
         // รับอินพุตจากผู้เล่น
         float moveVertical = Input.GetAxis("Vertical");
         float moveHorizontal = Input.GetAxis("Horizontal");
-        bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);  // ตรวจสอบว่ากด Shift หรือไม่
+        //bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);  // ตรวจสอบว่ากด Shift หรือไม่
 
         // หาทิศทางของกล้อง
         Vector3 cameraForward = mainCamera.transform.forward;
@@ -42,10 +42,10 @@ public class playerwithfreelook : MonoBehaviour
         }
         
         // ตรวจสอบว่าวิ่งหรือไม่
-        if (isRunning)
+        /*if (isRunning)
         {
             movement *= runSpeedMultiplier;  // เพิ่มความเร็วเมื่อกด Shift
-        }
+        }*/
 
         // คำนวณการหมุนตามกล้อง
         if (movement != Vector3.zero)

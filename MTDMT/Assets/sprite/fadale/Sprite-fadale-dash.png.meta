@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96f5c1723035d6b46b23407dc9398301
+guid: d08c0842ecee8334f9fb23ecce0630f7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,70 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-fadel-walk-a_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 231f8d6c2f197ad4b80702866de2cb7e
-      internalID: -1932683743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-fadel-walk-a_1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f4442bc1ca5da54ca9ae404a4d9e985
-      internalID: 806954591
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-fadel-walk-a_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a17f9a3c63b6994dae9bd0d76d7fbe8
-      internalID: -89916759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-fadel-walk-a_3
+      name: Sprite-fadale-dash_0
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7ba56039126e2349b8d05de2952e983
-      internalID: -1205442676
+      spriteID: ee556561120f3a4408a9cb805b621f99
+      internalID: 168533370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-fadel-walk-a_4
+      name: Sprite-fadale-dash_1
       rect:
         serializedVersion: 2
         x: 48
@@ -208,35 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4de3b2f0c062f3c41a92f5a488778f22
-      internalID: 1138993405
+      spriteID: 870ab35392ff0544e8a5d3845ac68340
+      internalID: -1093968654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-fadel-walk-a_5
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d78398cba4abe614a8c0e838a1a25074
-      internalID: -39090749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-fadel-walk-a_6
+      name: Sprite-fadale-dash_2
       rect:
         serializedVersion: 2
         x: 0
@@ -250,29 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9af107e8fef980f4b8916c5877ff23c9
-      internalID: -1092419822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-fadel-walk-a_7
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e63553128c987234f8da101e2cf8e3d4
-      internalID: 28072695
+      spriteID: a19852a91bb7ba94eb2644ac56eecbc0
+      internalID: -619940736
       vertices: []
       indices: 
       edges: []
@@ -280,7 +175,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ad3cd38193bce864686bedf07eb05957
+    spriteID: 59059df59864a3b4caf8e674d8f39ad8
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite-fadel-walk-a_0: -1932683743
-      Sprite-fadel-walk-a_1: 806954591
-      Sprite-fadel-walk-a_2: -89916759
-      Sprite-fadel-walk-a_3: -1205442676
-      Sprite-fadel-walk-a_4: 1138993405
-      Sprite-fadel-walk-a_5: -39090749
-      Sprite-fadel-walk-a_6: -1092419822
-      Sprite-fadel-walk-a_7: 28072695
+      Sprite-fadale-dash_0: 168533370
+      Sprite-fadale-dash_1: -1093968654
+      Sprite-fadale-dash_2: -619940736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

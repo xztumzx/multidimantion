@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class control : MonoBehaviour
+public class control1 : MonoBehaviour
 {
     public Animator anim;
     public CharacterController characontroll;
