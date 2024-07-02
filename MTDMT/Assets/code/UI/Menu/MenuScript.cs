@@ -76,9 +76,10 @@ public class MenuScript : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }*/
 
+    public string NewGameScene;
     public void NewGameDialogYes()
     {
-        SceneManager.LoadScene("noey3");
+        SceneManager.LoadScene(NewGameScene);
     }
 
     public void LoadGameDialogYes()

@@ -82,10 +82,13 @@ public class SoundScript : MonoBehaviour
         {
             AudioListener.volume = musicDefaultVolume;
             AudioListener.volume = SFXDefaultVolume;
+
             musicSlider.value = musicDefaultVolume;
             musicTextValue.text = musicDefaultVolume.ToString("0.0");
+
             SFXSlider.value = SFXDefaultVolume;
             SFXTextValue.text = SFXDefaultVolume.ToString("0.0");
+
             VolumeApply();
         }
     }

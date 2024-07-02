@@ -1527,6 +1527,7 @@ MonoBehaviour:
   fullScreenToggle: {fileID: 72166574}
   comfirmationPrompt: {fileID: 1205967987}
   noSaveGameDialog: {fileID: 1239590941}
+  NewGameScene: home
 --- !u!4 &237646146
 Transform:
   m_ObjectHideFlags: 0
@@ -1792,7 +1793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &275982106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5127,6 +5128,7 @@ MonoBehaviour:
   fullScreenToggle: {fileID: 0}
   comfirmationPrompt: {fileID: 0}
   noSaveGameDialog: {fileID: 1239590941}
+  NewGameScene: 
 --- !u!114 &713088421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11454,6 +11456,7 @@ MonoBehaviour:
   fullScreenToggle: {fileID: 0}
   comfirmationPrompt: {fileID: 0}
   noSaveGameDialog: {fileID: 1239590941}
+  NewGameScene: 
 --- !u!1 &1655783118
 GameObject:
   m_ObjectHideFlags: 0
