@@ -53,7 +53,7 @@ public class PlayerStats : CharacterStats
     {
         if (Input.GetKeyDown(dashKey))
         {
-            Debug.Log("Attack!");
+            //Debug.Log("Attack!");
 
             currentStamina -= AttackCost;
             if (currentStamina < 0) currentStamina = 0;
