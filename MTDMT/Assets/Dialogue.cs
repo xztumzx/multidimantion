@@ -2,63 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
-public class Dialogue : MonoBehaviour
+public class Dialogue: MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
-    public float textSpeed;
+    [SerializeField]
+    private GameObject dialogueCanvas;
 
-    private int index;
+    [SerializeField]
+    private TMP_Text speakerText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        textComponent.text = string.Empty;
-        StartDialogue();
-    }
+    [SerializeField]
+    private TMP_Text dialogueText;
+
+    [SerializeField]
+    private Image portraitImage;
+
+    //Dialogue Content
+    [SerializeField]
+    private string[] speaker;
+
+    [SerializeField]
+    [TextArea]
+    private string[] dialogueWords;
+
+    [SerializeField]
+    private Sprite[] portrait;
+
+    private bool dialogueActivated;
+
 
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Interact") && dialogueActivated == true)
         {
-            if (textComponent.text == lines[index])
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }
+            dialogueCanvas.SetActive(true);
+            speakerText.text = speaker[0];
+            dialogueText.text = dialogueWords[0];
+            portraitImage.sprite = portrait[0];
         }
-    }
-    void StartDialogue()
-    {
-        index = 0;
-        StartCoroutine(TypeLine());
 
     }
-    IEnumerator TypeLine()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach (char c in lines[index].ToCharArray())
+        if (collision.gameObject.tag == "Player")
         {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            dialogueActivated = true;
         }
+        
     }
-    void NextLine()
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (index < lines.Length - 1)
-        {
-            index++;
-            textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+        dialogueActivated = false;
+        dialogueCanvas.SetActive(false);
     }
 }
