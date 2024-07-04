@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Dialogue: MonoBehaviour
 {
+
+
     [SerializeField]
     private GameObject dialogueCanvas;
 
@@ -30,33 +32,48 @@ public class Dialogue: MonoBehaviour
     private Sprite[] portrait;
 
     private bool dialogueActivated;
+    private int step;
+
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && dialogueActivated == true)
-        {
-            dialogueCanvas.SetActive(true);
-            speakerText.text = speaker[0];
-            dialogueText.text = dialogueWords[0];
-            portraitImage.sprite = portrait[0];
+       if (Input.GetButtonDown("Interact") )//&& dialogueActivated == true
+       {
+            if (step >= speaker.Length)
+            {
+                dialogueCanvas.SetActive(false);
+                step = 0;
+                dialogueActivated = false;
+            }
+            else
+            {
+                dialogueCanvas.SetActive(true);
+                speakerText.text = speaker[step];
+                dialogueText.text = dialogueWords[step];
+                portraitImage.sprite = portrait[step];
+                step += 1;
+
+            }
+
         }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            dialogueActivated = true;
-        }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+        //if (collision.gameObject.tag == "Player")
+        //{
+            //dialogueActivated = true;
+        //}
         
-    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        dialogueActivated = false;
-        dialogueCanvas.SetActive(false);
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+        //dialogueActivated = false;
+        //dialogueCanvas.SetActive(false);
+    //}
 }
