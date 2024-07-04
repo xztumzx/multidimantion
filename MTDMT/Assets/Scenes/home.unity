@@ -560,7 +560,6 @@ GameObject:
   - component: {fileID: 51615459}
   - component: {fileID: 51615458}
   - component: {fileID: 51615457}
-  - component: {fileID: 51615460}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -654,34 +653,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51615455}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &51615460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51615455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c35da10d6d210744099d9dcdef7e31e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  fadeDuration: 1
-  transparency: 0.3
-  objectRenderer: {fileID: 0}
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
-  fadeColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
-  isFading: 0
-  fadeTimer: 0
 --- !u!1 &84316004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7947,6 +7918,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1383553476493201170, guid: e00976d5e9a04e245a019e07fcae231a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2525984657274796379, guid: e00976d5e9a04e245a019e07fcae231a,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -7957,9 +7933,34 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3804725159343613819, guid: e00976d5e9a04e245a019e07fcae231a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804725159343613819, guid: e00976d5e9a04e245a019e07fcae231a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892685945928488156, guid: e00976d5e9a04e245a019e07fcae231a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892685945928488156, guid: e00976d5e9a04e245a019e07fcae231a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7187789797051936546, guid: e00976d5e9a04e245a019e07fcae231a,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304569241951625314, guid: e00976d5e9a04e245a019e07fcae231a,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7397387338144450890, guid: e00976d5e9a04e245a019e07fcae231a,
