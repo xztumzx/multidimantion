@@ -1,10 +1,10 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class Dialogue: MonoBehaviour
+public class Dialogue : MonoBehaviour
 {
 
 
@@ -39,8 +39,9 @@ public class Dialogue: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetButtonDown("Interact") )//&& dialogueActivated == true
+       if (Input.GetButtonDown("Interact") /*&& dialogueActivated == true)
        {
+
             if (step >= speaker.Length)
             {
                 dialogueCanvas.SetActive(false);
@@ -57,23 +58,30 @@ public class Dialogue: MonoBehaviour
 
             }
 
-        }
+       }
 
     }
 
+    void start()
+    {
+        DialogueHandler.enable = false;
+    }
+    public void ShowCanvas()
+    {
+        DialogueHandler.enable = true;
+    }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-        //if (collision.gameObject.tag == "Player")
-        //{
-            //dialogueActivated = true;
-        //}
-        
-    //}
 
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-        //dialogueActivated = false;
-        //dialogueCanvas.SetActive(false);
-    //}
-}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.log(dialogueActivated = true);
+        }
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.log(dialohueActivated = false);
+    }
+}*/
