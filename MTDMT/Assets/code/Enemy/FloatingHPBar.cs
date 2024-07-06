@@ -22,13 +22,13 @@ public class FloatingHPBar : MonoBehaviour
 
         }
 
-         if (Input.GetKeyDown(KeyCode.Space))
+         /*if (Input.GetKeyDown(KeyCode.Space))
         {
             takeDamage(10);
-        }
+        }*/
     }
 
-    void takeDamage(float damage)
+    public void takeDamage(float damage)
     {
         health -= damage;
     }
