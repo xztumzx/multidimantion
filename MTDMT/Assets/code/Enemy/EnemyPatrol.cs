@@ -12,6 +12,10 @@ public class EnemyPatrol : MonoBehaviour
 
     [SerializeField] LayerMask groundLayer, playerLayer;
 
+
+    Animator animator;
+
+
     //patrol
     Vector3 destPoint;
     bool walkpointSet;
@@ -26,15 +30,18 @@ public class EnemyPatrol : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
+
+        animator = GetComponent<Animator>();
+
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         playerInSight = Physics.CheckSphere(transform.position, sightRange, playerLayer);
         playerInSight = Physics.CheckSphere(transform.position, attackRange, playerLayer);
 
-        if(!playerInSight && !playerInAttackRange) Patrol();
+        if (!playerInSight && !playerInAttackRange) Patrol();
         if (playerInSight && !playerInAttackRange) Chase();
         if (playerInSight && playerInAttackRange) Attack();
     }
@@ -47,13 +54,19 @@ public class EnemyPatrol : MonoBehaviour
     void Attack()
     {
 
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("run"))
+        {
+            animator.SetTrigger("Attack");
+            agent.SetDestination(transform.position);
+        }
+
     }
 
     void Patrol()
     {
         if (!walkpointSet) SearchForDest();
         if (walkpointSet) agent.SetDestination(destPoint);
-        if(Vector3.Distance(transform.position, destPoint) < 10) walkpointSet = false ;
+        if (Vector3.Distance(transform.position, destPoint) < 10) walkpointSet = false;
     }
 
     void SearchForDest()
@@ -65,7 +78,7 @@ public class EnemyPatrol : MonoBehaviour
 
         if (Physics.Raycast(destPoint, Vector3.down, groundLayer))
         {
-            walkpointSet = true ;
+            walkpointSet = true;
         }
     }
 }
