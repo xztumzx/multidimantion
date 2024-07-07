@@ -475,7 +475,8 @@ GameObject:
   - component: {fileID: 3677763137366903160}
   - component: {fileID: 5825934892709540188}
   - component: {fileID: 1709273704614074598}
-  - component: {fileID: 5490289072956374937}
+  - component: {fileID: 4190438377377843749}
+  - component: {fileID: 1795533996585763373}
   - component: {fileID: 6442331059706567267}
   - component: {fileID: 2354682090083146515}
   m_Layer: 0
@@ -598,7 +599,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5490289072956374937
+--- !u!114 &4190438377377843749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -607,11 +608,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 8074554850348753677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 147f5a3df0a21da42a66170f9add8c40, type: 3}
+  m_Script: {fileID: 11500000, guid: 095e9b63710ce7840ad857ce3543faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 1709273704614074598}
-  target: {fileID: 0}
+  healthLeval: 10
+  maxHealth: 0
+  currentHealth: 0
+  staminalevel: 10
+  maxStamina: 0
+  currentStamina: 0
+--- !u!114 &1795533996585763373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074554850348753677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d9bdf8aca242c4884acf8e4ac41201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  range: 8
+  sightRange: 5
+  attackRange: 2
 --- !u!114 &6442331059706567267
 MonoBehaviour:
   m_ObjectHideFlags: 0
