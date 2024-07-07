@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +11,9 @@ public class EnemyPatrol : MonoBehaviour
     NavMeshAgent agent;
 
     [SerializeField] LayerMask groundLayer, playerLayer;
-
+    [SerializeField] float stopRange; // รัศมีที่ตัวละครจะหยุดเดิน
 
     Animator animator;
-
 
     //patrol
     Vector3 destPoint;
@@ -39,11 +38,20 @@ public class EnemyPatrol : MonoBehaviour
     void Update()
     {
         playerInSight = Physics.CheckSphere(transform.position, sightRange, playerLayer);
-        playerInSight = Physics.CheckSphere(transform.position, attackRange, playerLayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLayer);
 
-        if (!playerInSight && !playerInAttackRange) Patrol();
-        if (playerInSight && !playerInAttackRange) Chase();
-        if (playerInSight && playerInAttackRange) Attack();
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+        if (distanceToPlayer <= stopRange)
+        {
+            agent.SetDestination(transform.position); // หยุดตัวละคร
+        }
+        else
+        {
+            if (!playerInSight && !playerInAttackRange) Patrol();
+            if (playerInSight && !playerInAttackRange) Chase();
+            if (playerInSight && playerInAttackRange) Attack();
+        }
     }
 
     void Chase()
@@ -53,7 +61,6 @@ public class EnemyPatrol : MonoBehaviour
 
     void Attack()
     {
-
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("run"))
         {
             animator.SetTrigger("Attack");
