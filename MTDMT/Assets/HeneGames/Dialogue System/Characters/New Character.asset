@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
-  m_Name: Player
+  m_Name: New Character
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 1362442847, guid: cd0b5e875bd858743a618b7791fea85a, type: 3}
-  characterName: Fadale
+  characterPhoto: {fileID: 399421868, guid: be69162c0bda67347a9e42e31ee1e3cd, type: 3}
+  characterName: Mother

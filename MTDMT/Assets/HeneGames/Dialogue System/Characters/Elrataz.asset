@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4a308dae7ffd048a8b0eb8d5ae4a02, type: 3}
   m_Name: Elrataz
   m_EditorClassIdentifier: 
-  characterPhoto: {fileID: 21300000, guid: 7ca919c35ad327b46a19255daace105d, type: 3}
-  characterName: Elrataz
+  characterPhoto: {fileID: 1362442847, guid: cd0b5e875bd858743a618b7791fea85a, type: 3}
+  characterName: Fadale
