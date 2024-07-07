@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimatorManager : AnimatorManager
+/*public class EnemyAnimatorManager : AnimatorManager
 {
     EnemyLocomotionManager enemyLocomotionManager;
     private void Awake()
@@ -20,4 +20,4 @@ public class EnemyAnimatorManager : AnimatorManager
         Vector3 velocity = deltaPosition / delta;
         enemyLocomotionManager.enemyRigidBody.velocity = velocity;
     }
-}
+}*/
