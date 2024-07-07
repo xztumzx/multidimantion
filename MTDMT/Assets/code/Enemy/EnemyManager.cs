@@ -18,13 +18,13 @@ public class EnemyManager : characterManager
     }
     private void Update()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
         HandleCurrentAction();
     }
+
+    /*private void FixedUpdate()
+    {
+        
+    }*/
 
     private void HandleCurrentAction()
     {
@@ -32,10 +32,10 @@ public class EnemyManager : characterManager
         {
             enemyLocomotionManager.HandleDetaction();
         }
-        else
+        /*else
         {
             enemyLocomotionManager.HandleMoveToTarget();
-        }
+        }*/
     }
 }
 

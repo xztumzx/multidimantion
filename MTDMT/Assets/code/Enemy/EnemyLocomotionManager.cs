@@ -7,31 +7,31 @@ using UnityEngine.TextCore.Text;
 public class EnemyLocomotionManager : MonoBehaviour
 {
     EnemyManager enemyManager;
-    EnemyAnimatorManager enemyAnimatorManager;
+    /*EnemyAnimatorManager enemyAnimatorManager;
     NavMeshAgent navmeshAgent;
-    public Rigidbody enemyRigidBody;
+    public Rigidbody enemyRigidBody;*/
 
     public CharacterStats currentTarget;
     public LayerMask detectionLayer;
 
-    public float distanceFromTarget;
+    /*public float distanceFromTarget;
     public float stoppingDistance = 1f;
 
-    public float rotationSpeed = 15;
+    public float rotationSpeed = 15;*/
 
     private void Awake()
     {
         enemyManager = GetComponent<EnemyManager>();
-        enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
+        /*enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
         navmeshAgent = GetComponentInChildren<NavMeshAgent>();
-        enemyRigidBody = GetComponent<Rigidbody>();
+        enemyRigidBody = GetComponent<Rigidbody>();*/
     }
 
-    private void Start()
+    /*private void Start()
     {
         navmeshAgent.enabled = false;
         enemyRigidBody.isKinematic = false;
-    }
+    }*/
     public void HandleDetaction()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, enemyManager.detectionRadius, detectionLayer);
@@ -55,7 +55,7 @@ public class EnemyLocomotionManager : MonoBehaviour
         }
     }
 
-    public void HandleMoveToTarget()
+    /*public void HandleMoveToTarget()
     {
         if (enemyAnimatorManager == null)
         {
@@ -124,5 +124,5 @@ public class EnemyLocomotionManager : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, navmeshAgent.transform.rotation, rotationSpeed / Time.deltaTime);
         }
     }
-
+    */
 }
